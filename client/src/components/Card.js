@@ -51,7 +51,7 @@ export default function MediaCard({ id, taskName, status, deadline, onStatusChan
 
   const handleComplete = async () => {
     try {
-      const response = await axios.put(`http://localhost:8080/api/todos/update-task/${id}`, {
+      const response = await axios.put(`https://task-management-nrvo.onrender.com/api/todos/update-task/${id}`, {
         status: 'Completed'
       });
       onStatusChange(response.data);
@@ -62,7 +62,7 @@ export default function MediaCard({ id, taskName, status, deadline, onStatusChan
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8080/api/todos/delete-task/${id}`);
+      await axios.delete(`https://task-management-nrvo.onrender.com/api/todos/delete-task/${id}`);
       onDelete(id);
     } catch (error) {
       console.error('Error deleting task:', error);
@@ -71,7 +71,7 @@ export default function MediaCard({ id, taskName, status, deadline, onStatusChan
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(`http://localhost:8080/api/todos/update-task/${id}`, {
+      const response = await axios.put(`https://task-management-nrvo.onrender.com/api/todos/update-task/${id}`, {
         taskName: editedTaskName,
         status: editedStatus,
         deadline: editedDeadline
