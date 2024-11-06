@@ -13,7 +13,7 @@ const PendingTask = () => {
   useEffect(() => {
     const fetchPendingTasks = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/todos/get-task');
+        const response = await axios.get('https://task-management-nrvo.onrender.com/api/todos/get-task');
         // Filter tasks with status 'Pending'
         const pendingTasks = response.data.filter(task => task.status === 'Pending');
         setTasks(pendingTasks);
