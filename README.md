@@ -22,4 +22,4 @@
 
 You can view a live demo of the Task Management app here:
 
-[Task Management]-(https://task-management46.netlify.app/)
+Task Management-(https://task-management46.netlify.app/)
