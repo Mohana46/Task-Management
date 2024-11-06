@@ -18,7 +18,7 @@ const MainPage = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/todos/get-task');
+        const response = await axios.get('https://task-management-nrvo.onrender.com/api/todos/get-task');
         setTasks(response.data);
       } catch (error) {
         console.error('There was an error fetching the tasks!', error);
